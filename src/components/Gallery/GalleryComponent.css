@@ -1,0 +1,17 @@
+.gallery-component {
+	width: 100%;
+}
+.gallery-body {
+	width: 100%;
+	max-width: 1200px;
+	margin: 10px auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.loading {
+	font-size: 4em;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	background: white;
+}
