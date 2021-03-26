@@ -3,33 +3,12 @@ import NavBar from '../../components/Navbar/NavBar'
 import './GalleryPage.css'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Footer from '../../components/Footer/Footer';
-import React , {useEffect , useState , useContext} from 'react'
-import { UserContext } from '../../context/UserProvider'
-import { Redirect } from "react-router-dom";
+import React  from 'react'
+
 
 const GalleryPage = () => {
 
 
-const {user } = useContext(UserContext)
-
-const[redirect, setRedirect]=useState(null)
-
-useEffect(()=>{
-
-if(!user){
-    setRedirect('/') 
-     
-}
-
-},[user])
-
-if(redirect){
-    return <Redirect to={redirect} />
-}
-
-console.log(user)
-
-console.log(redirect)
 
     return (
         <div className='gallery-page'>

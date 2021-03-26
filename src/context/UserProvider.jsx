@@ -5,7 +5,7 @@ export const UserContext = createContext()
 
 function UserProvider(props) {
 
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState({})
 
     const signInWithGoogle = ()=>{
 

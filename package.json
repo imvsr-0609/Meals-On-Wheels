@@ -2,6 +2,7 @@
   "name": "meals-on-wheels",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://awww.api.com",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -16,7 +17,8 @@
     "react-scripts": "4.0.1",
     "react-uuid": "^1.0.2",
     "typewriter-effect": "^2.17.0",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "zomato-api": "^0.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

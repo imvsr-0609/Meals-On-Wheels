@@ -37,7 +37,7 @@
 	font-weight: 500;
 	transform: scale(1.05);
 }
-#active{
+#active {
 	color: rgb(255, 189, 47);
 	font-weight: 500;
 }
@@ -52,7 +52,7 @@
 	cursor: pointer;
 }
 
-.nav-right button {
+.nav-btn {
 	color: rgba(black, 0.3);
 	width: 35px;
 	height: 35px;
@@ -66,7 +66,7 @@
 	background-color: rgb(255, 189, 47);
 	transition: transform 0.3s ease-in;
 }
-.nav-right button:hover {
+.nav-btn:hover {
 	background-color: rgb(250, 230, 117);
 	border: 2px solid rgb(255, 189, 47);
 	transform: scale(1.1);
@@ -99,7 +99,7 @@
 	.navbar {
 		padding: 10px;
 	}
-	.nav-right button {
+	.nav-btn {
 		font-size: 0.8em;
 		width: 30px;
 		height: 30px;

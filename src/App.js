@@ -1,33 +1,41 @@
-import React from 'react';
-import {BrowserRouter as Router ,Switch , Route} from 'react-router-dom'
+import React,{useContext} from 'react';
+import {BrowserRouter as Router ,Switch , Route , Redirect} from 'react-router-dom'
 import './App.css';
-import UserProvider from './context/UserProvider';
+import { UserContext } from './context/UserProvider';
+import CheckOut from './Pages/CheckoutPage/CheckOut';
 import GalleryPage from './Pages/GalleryPage/GalleryPage';
 import HomePage from './Pages/HomePage/HomePage';
 import SignInPage from './Pages/SignInPage/Sign-in-page';
 
 function App() {
+
+  const {user} = useContext(UserContext)
+
   return (
     <div className="App">
-    <UserProvider>
+   
       <Router>
         <Switch>
 
           <Route exact path="/">
-            <SignInPage/>
+          { !user?.email ? <SignInPage/> : <Redirect to="/home"/> }
           </Route>
 
           <Route exact path="/home">
-            <HomePage/>
+          { user?.email ? <HomePage/> : <Redirect to="/"/> }
           </Route>
 
           <Route exact path="/gallery">
-            <GalleryPage/>
+          { user?.email ? <GalleryPage/> : <Redirect to="/"/> }
+          </Route>
+
+          <Route exact path="/checkout">
+          { user?.email ? <CheckOut/> : <Redirect to="/"/> }
           </Route>
 
         </Switch>
       </Router> 
-    </UserProvider>
+  
       
     </div>
   );

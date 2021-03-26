@@ -1,27 +1,12 @@
-import React ,{useState , useEffect , useContext} from 'react'
+import React ,{ useContext} from 'react'
 import './SignInTop.css'
 import logo from '../../assets/image/mow-logo.jpg'
 import Typewriter from 'typewriter-effect'
-import { Redirect } from 'react-router-dom';
 import { UserContext } from '../../context/UserProvider'
 
 function SignInTop() {
 
-  const {user,signInWithGoogle } = useContext(UserContext)
-  const [redirect , setRedirect] = useState(null)
-
-  useEffect(()=>{
-      if(user?.email){
-          setRedirect('/home')
-          console.log(user)
-      }
-      
-
-  }, [user])
-
-  if(redirect){
-      return <Redirect to={redirect} />
-  }
+  const {signInWithGoogle } = useContext(UserContext)
 
     return (
         <div className='sign-in-top'>

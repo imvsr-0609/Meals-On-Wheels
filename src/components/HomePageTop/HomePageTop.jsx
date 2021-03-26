@@ -5,12 +5,34 @@ import SearchIcon from '@material-ui/icons/Search';
 import useLocation from '../customHooks/useLocation';
 
 const HomePageTop = () => {
-    const {position , error} = useLocation()
+    const {position,placeloading} = useLocation()
     const[input ,setInput]= useState("")
-   useEffect(()=>{
-       console.log(input)
-   },[input])
-   console.log(position)
+    const[city,setCity]=useState("")
+    const[loading,setLoading] = useState(true)
+
+  
+    const fetchCity = async()=>{
+        try{
+            if(position || !placeloading){
+                await fetch(`https://api.opencagedata.com/geocode/v1/json?key=4ccd7a3b2350430e938787d3edde7468&q=${position.latitude}%2C${position.longitude}&pretty=1`)
+                .then(res=>res.json())
+                .then(data=>setCity(data?.results[0]?.components?.state_district))
+                setLoading(false)
+                
+            }
+           
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
+
+//    useEffect(()=>{
+//     fetchCity()
+//    },[])
+
+
+
     return (
         <div className="homepage-top">
         <h1>Meals On Wheels</h1>
@@ -18,7 +40,8 @@ const HomePageTop = () => {
         <div className='search'>
         <div className='user-location'>
         <RoomIcon/>
-        <p>New Delhi</p>        
+        {loading ? <p>loading..</p> : <p>{city}</p>   }
+             
         </div>
         <div className='search-input'>
          <SearchIcon/>
