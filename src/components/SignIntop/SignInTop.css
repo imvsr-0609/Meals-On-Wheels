@@ -79,7 +79,17 @@
 	background: none;
 	border: 2px solid white;
 }
-
+.signin-loader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.6);
+	top: 0%;
+	left: 0%;
+	display: grid;
+	z-index: 999;
+	place-items: center;
+}
 .typewriter {
 	font-size: 3em;
 	font-weight: 650;

@@ -6,6 +6,7 @@ export const UserContext = createContext()
 function UserProvider(props) {
 
     const [user, setUser] = useState({})
+    const [loadingUser,setLoadingUser]= useState(true)
 
     const signInWithGoogle = ()=>{
 
@@ -33,13 +34,14 @@ function UserProvider(props) {
             displayName: user?.displayName,
             email:user?.email
         })
+        setLoadingUser(false)
     })
 
 
     },[])
 
     return(
-        <UserContext.Provider value={{user, signInWithGoogle , logout}}>{props.children}</UserContext.Provider>
+        <UserContext.Provider value={{user, signInWithGoogle , logout,loadingUser}}>{props.children}</UserContext.Provider>
     )
     
 }

@@ -3,10 +3,11 @@ import './SignInTop.css'
 import logo from '../../assets/image/mow-logo.jpg'
 import Typewriter from 'typewriter-effect'
 import { UserContext } from '../../context/UserProvider'
+import Loader from '../Loader/Loader'
 
 function SignInTop() {
 
-  const {signInWithGoogle } = useContext(UserContext)
+  const {signInWithGoogle ,loadingUser } = useContext(UserContext)
 
     return (
         <div className='sign-in-top'>
@@ -18,6 +19,7 @@ function SignInTop() {
             <h1>Meals On Wheels</h1>
 
          </nav>
+         {loadingUser && <div className='signin-loader'> <Loader/> </div>}
 
          <div className='sign-in-body'>
          
@@ -51,7 +53,7 @@ function SignInTop() {
 
                 <h4>From Your Favourite Restaurant .</h4>
                 <button onClick={signInWithGoogle}>sign in with google</button>
-            
+                
             </div>
          
          </div>
