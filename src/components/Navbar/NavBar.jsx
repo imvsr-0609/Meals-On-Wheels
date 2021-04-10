@@ -32,7 +32,7 @@ const NavBar = ({active}) => {
         <div className='nav-right'>
             <div className='name'>
                 <p>Welcome</p> 
-                <h3> {user?.displayName.split(" ")[0]}</h3>
+                <h3> {user?.displayName?.split(" ")[0]} </h3>
             </div>
             
             <button className='nav-btn' onClick={e=> setShowCart(!showCart)}><ShoppingCartIcon fontSize="small"  /></button>

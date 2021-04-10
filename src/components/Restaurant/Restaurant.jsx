@@ -1,9 +1,9 @@
 import React from 'react'
 import './Restaurant.css'
 
-const Restaurant = () => {
+const Restaurant = ( {toggleMenufirst}) => {
     return (
-        <div className='restaurant-card'>
+        <div className='restaurant-card' onClick={toggleMenufirst}>
             <img src="https://i.pinimg.com/564x/62/5f/a0/625fa02b69d10ee443145b7ca51082c1.jpg" alt="restaurant" />
             <div className='restaurant-details'>
             <h2>Chinese Corner</h2>

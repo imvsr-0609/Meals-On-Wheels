@@ -22,15 +22,15 @@ function App() {
           </Route>
 
           <Route exact path="/home">
-          { user?.email ? <HomePage/> : <Redirect to="/"/> }
+          <HomePage/>
           </Route>
 
           <Route exact path="/gallery">
-          { user?.email ? <GalleryPage/> : <Redirect to="/"/> }
+         <GalleryPage/> 
           </Route>
 
           <Route exact path="/checkout">
-          { user?.email ? <CheckOut/> : <Redirect to="/"/> }
+           <CheckOut/> 
           </Route>
 
         </Switch>

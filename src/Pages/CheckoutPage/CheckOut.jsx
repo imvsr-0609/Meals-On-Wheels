@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
-import CheckOutComponent from '../../components/CheckOutComponent/CheckOutComponent'
+
 import StripeCheckout from 'react-stripe-checkout';
 import order_logo from '../../assets/image/order.png'
 import NavBar from '../../components/Navbar/NavBar'
 import {useHistory} from 'react-router-dom'
 import './CheckOut.css'
+import CheckOutComponent from '../../components/CheckOutComponent/CheckOutComponent';
 
 const CheckOut = () => {
 
@@ -46,12 +47,11 @@ const CheckOut = () => {
             <div className='checkout'>
             <div className="checkout-container">
             
-            <CheckOutComponent/>
-            <CheckOutComponent/>
-            <CheckOutComponent/>
-            <CheckOutComponent/>
-            <CheckOutComponent/>
-            <CheckOutComponent/>
+           <CheckOutComponent/>
+           <CheckOutComponent/>
+           <CheckOutComponent/>
+           <CheckOutComponent/>
+           <CheckOutComponent/>
            
             </div>
             <div className='checkout-details'>
