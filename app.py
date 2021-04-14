@@ -12,7 +12,7 @@ from sklearn.neighbors import NearestNeighbors
 st.markdown("<h1 style='text-align: center; color: White;background-color: Red'>Food Recommendation System</h1>",unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: Black;'>Drop in The required Inputs and we will do  the rest.</h3>",unsafe_allow_html=True)
 # st.markdown("<h4 style='text-align: center; color: Black;'>Project by Cookie Clan</h4>", unsafe_allow_html=True)
-st.text("Let us help you with ordering")
+
 st.sidebar.header("What is this Project about?")
 st.sidebar.text("It a Web app that would help the user in determining their choice of dishes.")
 st.sidebar.header("What tools where used to make this?")
@@ -22,11 +22,11 @@ nav = st.sidebar.radio("",["I'll Just use the predictor","YES! SHOW ME SOME FOOD
 
 if nav == "I'll Just use the predictor":
 
-# st.text("Let us help you with ordering")
+    st.markdown("<h3 style='text-align: center; color: Black;'>Let us help you with ordering food</h3>",unsafe_allow_html=True)
 
 
 ## nav = st.sidebar.radio("Navigation",["Home","IF Necessary 1","If Necessary 2"])
-    st.image("foood.jpg",width= 600)
+    st.image("assets/indian-dishes.jpg",width= 650)
     st.subheader("Whats your preference?")
     vegn = st.radio("Vegetables or none!",["veg","non-veg"],index = 1) 
 
@@ -94,4 +94,29 @@ if nav == "I'll Just use the predictor":
                 st.write(i)
 
 if nav == "YES! SHOW ME SOME FOOD!":
-    st.image("cheese.jpg",width= 400)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Food Gallery</h3>",unsafe_allow_html=True)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Masala Dosa</h3>",unsafe_allow_html=True)
+    st.image("assets/Masala-Dos.jpg",width= 500)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Hyderabadi Chicken Dum Biryani</h3>",unsafe_allow_html=True)
+    st.image("assets/Hyderabadi.jpg",width= 450)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Chilly Chicken</h3>",unsafe_allow_html=True)
+    st.image("assets/chilli-chicken.jpg",width= 500)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Paneer 65</h3>",unsafe_allow_html=True)
+    st.image("assets/paneer65.jpg",width= 500)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Dal Fry</h3>",unsafe_allow_html=True)
+    st.image("assets/dalfry.jpg",width= 400)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Butter Naan</h3>",unsafe_allow_html=True)
+    st.image("assets/naan.jpg",width= 500)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Rajma Chawal</h3>",unsafe_allow_html=True)
+    st.image("assets/rajma.jpg",width= 500)
+
+    st.markdown("<h3 style='text-align: center; color: Black;'>Goan Prawn Curry</h3>",unsafe_allow_html=True)
+    st.image("assets/goan.jpg",width= 500)
