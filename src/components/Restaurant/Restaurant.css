@@ -1,36 +1,34 @@
-.restaurant-card{
-    width: 300px;
-    border-radius: 10px;
-    height: content-fit;
-    padding: 5px;
-    padding-bottom: 20px;
-    cursor: pointer;
-    margin: 20px;
-    box-shadow: 4px 3px 29px -1px rgba(137,133,133,0.5);
+.restaurant-card {
+	border-radius: 10px;
+	height: content-fit;
+	padding: 5px;
+	padding-bottom: 20px;
+	cursor: pointer;
+	margin: 20px;
+	box-shadow: 4px 3px 29px -1px rgba(137, 133, 133, 0.5);
 }
-.restaurant-card:hover{
-    box-shadow: 4px 3px 35px -1px rgba(137,133,133,0.75);
+.restaurant-card:hover {
+	box-shadow: 4px 3px 35px -1px rgba(137, 133, 133, 0.75);
 }
-.restaurant-card img{
-    width: 290px;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius:10px ;
-    border-top-right-radius:10px ;
+.restaurant-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
-.restaurant-details{
-    font-size: .8em;
-    border-bottom: .5px solid lightgray;
-    padding: 0 5px;
+.restaurant-details {
+	font-size: 0.8em;
+	border-bottom: 0.5px solid lightgray;
+	padding: 0 5px;
 }
-.restaurant-details > *{
-    margin: 5px 0;
+.restaurant-details > * {
+	margin: 5px 0;
 }
-.restaurant-specs{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-    
+.restaurant-specs {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
 }

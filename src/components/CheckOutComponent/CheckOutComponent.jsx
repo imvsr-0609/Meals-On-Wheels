@@ -1,32 +1,47 @@
-import React from 'react'
-import './CheckOutComponent.css'
+import React, { useContext } from 'react';
+import './CheckOutComponent.css';
+import { db } from '../../firebase';
+import { UserContext } from '../../context/UserProvider';
 
-const CheckOutComponent = () => {
-    return (
-        <div className='checkout-component'>
+const CheckOutComponent = ({
+	image,
+	item,
+	price,
+	quantity,
+	description,
+	id,
+}) => {
+	const { user } = useContext(UserContext);
+	const dbref = db.collection(`users/${user.id}/cart`);
 
-        <div className='checkout-component-left'>
-        
-        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt="food" />
-        <div className='checkout-item-details'>
-        
-        <p>Chicken biriyani</p>
-        <p>10 $</p>
-        <p>Delicious biriyani with raita and salads</p>
-        
-        </div>
-        
-        
-        </div>
-        <div className='checkout-component-right'>
-        <button>-</button>
-        <p>5</p>
-        <button>+</button>
-        
-        </div>
-     
-        </div>
-    )
-}
+	const handleIncrement = () => {
+		dbref.doc(id).update({ quantity: quantity + 1 });
+	};
 
-export default CheckOutComponent
+	const handleDecrement = () => {
+		if (quantity === 1) {
+			return;
+		}
+		dbref.doc(id).update({ quantity: quantity - 1 });
+	};
+
+	return (
+		<div className="checkout-component">
+			<div className="checkout-component-left">
+				<img src={image} alt="food" />
+				<div className="checkout-item-details">
+					<p>{item}</p>
+					<p className="checkout-price">₹ {price}</p>
+					<p className="checkout-description">{description}</p>
+				</div>
+			</div>
+			<div className="checkout-component-right">
+				<button onClick={handleDecrement}>-</button>
+				<p>{quantity}</p>
+				<button onClick={handleIncrement}>+</button>
+			</div>
+		</div>
+	);
+};
+
+export default CheckOutComponent;

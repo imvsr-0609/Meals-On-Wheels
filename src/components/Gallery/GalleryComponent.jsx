@@ -16,7 +16,7 @@ const GalleryComponent = () => {
    useEffect(()=>{
     const fetchdata = async()=>{
         try{
-            fetch(url)
+            await fetch(url)
             .then(res=>res.json())
             .then(images =>setImages(images))
             
@@ -31,7 +31,7 @@ const GalleryComponent = () => {
        fetchdata()
    },[])
 
-   console.log(images)
+  
 
     return (
         <div className='gallery-component'>

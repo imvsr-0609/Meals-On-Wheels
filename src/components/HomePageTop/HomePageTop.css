@@ -71,3 +71,22 @@
 .search-input > * {
 	margin: 0 5px;
 }
+
+@media only screen and (max-width: 786px) {
+	.user-location,
+	.search-input {
+		font-size: 0.7em;
+	}
+	.homepage-top h1 {
+		font-size: 3.5em;
+		margin-bottom: 10px;
+	}
+	.homepage-top h3 {
+		font-size: 1.4em;
+		color: white;
+		font-weight: 400;
+	}
+	.search {
+		padding: 10px;
+	}
+}

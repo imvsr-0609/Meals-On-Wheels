@@ -47,6 +47,18 @@
 	border: 1px solid black;
 	background: white;
 }
+.checkout-description {
+	font-weight: 400;
+	font-size: 0.8em;
+	color: gray;
+	width: 90%;
+	margin-top: 10px;
+}
+
+.checkout-price {
+	margin: 5px 0;
+}
+
 @media only screen and (max-width: 786px) {
 	.checkout-component-left img {
 		width: 50px;

@@ -5,7 +5,17 @@ export const UserContext = createContext()
 
 function UserProvider(props) {
 
-    const [user, setUser] = useState({})
+  const getUser = ()=>{
+    const data = localStorage.getItem('user')
+    if(data){
+      return JSON.parse(data)
+    }
+    else{
+      return null
+    }
+  }
+
+    const [user, setUser] = useState(getUser)
     const [loadingUser,setLoadingUser]= useState(true)
 
     const signInWithGoogle = ()=>{
@@ -22,6 +32,7 @@ function UserProvider(props) {
         auth.signOut().then(()=>{
           console.log('loggedOut')
           setUser(null)
+          sessionStorage.clear()
         })
         .catch(error =>{
           console.log(error.message)
@@ -32,8 +43,11 @@ function UserProvider(props) {
     auth.onAuthStateChanged(async(user)=>{
         await setUser({
             displayName: user?.displayName,
-            email:user?.email
+            email:user?.email,
+            id:user?.uid,
+            picture:user?.photoURL
         })
+        localStorage.setItem('user' , JSON.stringify(user))
         setLoadingUser(false)
     })
 

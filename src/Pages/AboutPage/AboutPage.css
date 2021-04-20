@@ -1,0 +1,82 @@
+.about-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100vw;
+	min-height: 100vh;
+
+	background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.2),
+			rgba(78, 53, 0, 0.8)
+		),
+		url('../../assets/image/about-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.about-body {
+	margin-top: 30px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.about-body h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 3em;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.about-body h1 span {
+	color: rgb(255, 189, 47);
+}
+
+.about-card {
+	color: white;
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(10px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 300px;
+	height: 450px;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 10px;
+}
+.about-card a {
+	color: rgb(0, 225, 255);
+	text-decoration: none;
+}
+.about-card img {
+	height: 200px;
+	width: 200px;
+	object-fit: contain;
+	border-radius: 50%;
+}
+.about-component {
+	display: grid;
+	place-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.about-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 50%;
+	align-items: center;
+}
+
+@media only screen and (max-width: 786px) {
+	.about-body {
+		margin-top: 90px;
+	}
+}

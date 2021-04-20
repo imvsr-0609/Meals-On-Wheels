@@ -56,6 +56,15 @@
 .checkout-success-body > * {
 	margin: 20px 0;
 }
+.checkout-loader {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 .order-img {
 	width: 300px;
