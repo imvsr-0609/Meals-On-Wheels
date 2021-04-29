@@ -1,14 +1,15 @@
 .restaurant-card {
 	border-radius: 10px;
-	height: content-fit;
+	height: object-fit;
 	padding: 5px;
 	padding-bottom: 20px;
 	cursor: pointer;
 	margin: 20px;
-	box-shadow: 4px 3px 29px -1px rgba(137, 133, 133, 0.5);
+
+	box-shadow: 4px 3px 29px -1px rgba(137, 133, 133, 0.3);
 }
 .restaurant-card:hover {
-	box-shadow: 4px 3px 35px -1px rgba(137, 133, 133, 0.75);
+	box-shadow: 4px 3px 35px -1px rgba(137, 133, 133, 0.6);
 }
 .restaurant-card img {
 	width: 100%;
@@ -20,8 +21,13 @@
 
 .restaurant-details {
 	font-size: 0.8em;
-	border-bottom: 0.5px solid lightgray;
+	font-weight: 500;
+	color: rgb(126, 126, 126);
 	padding: 0 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 50%;
 }
 .restaurant-details > * {
 	margin: 5px 0;

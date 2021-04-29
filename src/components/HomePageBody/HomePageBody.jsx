@@ -1,24 +1,53 @@
-import React from 'react'
-import './HomePageBody.css'
-import Restaurant from '../Restaurant/Restaurant'
-import restaurantData from './RestaurantData'
+import React, { useState, useEffect } from 'react';
+import './HomePageBody.css';
+import Restaurant from '../Restaurant/Restaurant';
+import restaurantData from './RestaurantData';
+import Loader from '../Loader/Loader';
 
-const HomePageBody = ({toggleMenu}) => {
-    return (
-        <div className='homepage-body'>
-        <h1>25 Restaurants in your area</h1>
-        <div className='restaurant-component'>
-        <Restaurant toggleMenufirst={toggleMenu}/>
-        <Restaurant toggleMenufirst={toggleMenu}/>
-        <Restaurant toggleMenufirst={toggleMenu}/>
-        <Restaurant toggleMenufirst={toggleMenu}/>
-        <Restaurant toggleMenufirst={toggleMenu}/>
-        <Restaurant toggleMenufirst={toggleMenu}/>
-    
-        </div>
-            
-        </div>
-    )
-}
+const HomePageBody = ({ toggleMenu, position, input }) => {
+	// console.log(position);
 
-export default HomePageBody
+	const [loading, setLoading] = useState(false);
+	const [updatedData, setUpdatedData] = useState(restaurantData);
+
+	useEffect(() => {
+		position !== 'null' ? setLoading(false) : setLoading(true);
+		const data = restaurantData.filter(
+			(restaurant) =>
+				restaurant.restaurant.name.toLowerCase().includes(input) ||
+				restaurant.restaurant.cuisines.toLowerCase().includes(input),
+		);
+
+		setUpdatedData(data);
+	}, [input, position]);
+
+	return (
+		<>
+			{loading ? (
+				<div className="gallery-loader">
+					<Loader />
+				</div>
+			) : (
+				<div className="homepage-body">
+					{updatedData.length > 0 ? (
+						<h1>{updatedData.length} Restaurants in your area</h1>
+					) : (
+						<h1>No Restaurant Found</h1>
+					)}
+
+					<div className="restaurant-component">
+						{updatedData.map((restaurant, idx) => (
+							<Restaurant
+								key={idx}
+								toggleMenufirst={toggleMenu}
+								{...restaurant}
+							/>
+						))}
+					</div>
+				</div>
+			)}
+		</>
+	);
+};
+
+export default HomePageBody;

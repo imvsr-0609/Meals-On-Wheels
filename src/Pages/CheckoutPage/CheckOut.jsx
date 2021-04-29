@@ -37,7 +37,7 @@ const CheckOut = () => {
 	if (showSuccessful) {
 		setTimeout(() => {
 			history.push('/home');
-		}, 10000);
+		}, 5000);
 	}
 
 	const fetchData = () => {
