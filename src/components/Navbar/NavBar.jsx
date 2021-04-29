@@ -32,8 +32,10 @@ const NavBar = ({ active }) => {
 				<Link to="/about" id={active === 'about' ? 'active' : ''}>
 					about
 				</Link>
-				<a href="#">blog</a>
-				<a href="#">contact</a>
+				<a href="https://meals-on-wheels.com/blog/" target="blank">
+					blog
+				</a>
+				<a href="#footer">contact</a>
 			</div>
 			<div className="nav-right">
 				<div className="name">

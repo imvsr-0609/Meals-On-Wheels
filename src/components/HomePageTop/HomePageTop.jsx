@@ -69,7 +69,7 @@ const HomePageTop = ({ setposition, input, setInput }) => {
 				<div className="search-input">
 					<SearchIcon />
 					<input
-						type="search"
+						type="text"
 						placeholder="Search for restaurant or cuisine... "
 						value={input}
 						onChange={(e) => {

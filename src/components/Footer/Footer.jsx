@@ -10,7 +10,7 @@ import EmailIcon from '@material-ui/icons/Email';
 
 const Footer = () => {
 	return (
-		<div className="footer">
+		<div className="footer" id="footer">
 			<div className="footer-main">
 				<div className="footer-left">
 					<div className="footer-top">
@@ -62,7 +62,7 @@ const Footer = () => {
 
 					<div className="phone">
 						<PhoneIcon />
-						<p>+1 555 123456</p>
+						<p>+91 8809613337</p>
 					</div>
 					<div className="mail">
 						<EmailIcon />
