@@ -5,8 +5,6 @@ import restaurantData from './RestaurantData';
 import Loader from '../Loader/Loader';
 
 const HomePageBody = ({ toggleMenu, position, input }) => {
-	// console.log(position);
-
 	const [loading, setLoading] = useState(false);
 	const [updatedData, setUpdatedData] = useState(restaurantData);
 

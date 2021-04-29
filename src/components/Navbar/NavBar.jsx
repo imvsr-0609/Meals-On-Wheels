@@ -1,6 +1,6 @@
 import './NavBar.css';
 import logo from '../../assets/image/mow-logo.jpg';
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { UserContext } from '../../context/UserProvider';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';

@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { UserContext } from '../../context/UserProvider';
+import React, { useState } from 'react';
+
 import './HomePage.css';
 import NavBar from '../../components/Navbar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import HomePageTop from '../../components/HomePageTop/HomePageTop';
 import HomePageBody from '../../components/HomePageBody/HomePageBody';
-import { Menu } from '@material-ui/core';
+
 import MenuCard from '../../components/MenuComponent/Menu';
 
 function HomePage() {
