@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './HomePageTop.css';
 import RoomIcon from '@material-ui/icons/Room';
 import SearchIcon from '@material-ui/icons/Search';
@@ -22,6 +22,8 @@ const HomePageTop = ({ setposition, input, setInput }) => {
 	const onError = (error) => {
 		setError(error.message);
 	};
+
+	const inputRef = useRef();
 
 	const fetchCity = async () => {
 		try {
@@ -72,8 +74,9 @@ const HomePageTop = ({ setposition, input, setInput }) => {
 						type="text"
 						placeholder="Search for restaurant or cuisine... "
 						value={input}
-						onChange={(e) => {
-							setInput(e.target.value);
+						ref={inputRef}
+						onChange={() => {
+							setInput(inputRef.current.value);
 						}}
 					/>
 				</div>
