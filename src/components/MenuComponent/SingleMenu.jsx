@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { UserContext } from '../../context/UserProvider';
 import { db } from '../../firebase';
 import firebase from 'firebase';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 const SingleMenu = ({ name, description, image, price }) => {
 	const { user } = useContext(UserContext);
@@ -31,7 +32,10 @@ const SingleMenu = ({ name, description, image, price }) => {
 					<p>{description}</p>
 				</div>
 			</div>
-			<button onClick={addItem}>Add to Cart</button>
+			<button onClick={addItem}>
+				<p style={{ fontWeight: 'bold', fontSize: '12px' }}>Add</p>
+				<AddShoppingCartIcon />
+			</button>
 		</div>
 	);
 };
