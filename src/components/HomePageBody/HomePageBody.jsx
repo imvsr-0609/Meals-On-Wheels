@@ -12,8 +12,12 @@ const HomePageBody = ({ toggleMenu, position, input }) => {
 		position !== 'null' ? setLoading(false) : setLoading(true);
 		const data = restaurantData.filter(
 			(restaurant) =>
-				restaurant.restaurant.name.toLowerCase().includes(input) ||
-				restaurant.restaurant.cuisines.toLowerCase().includes(input),
+				restaurant.restaurant.name
+					.toLowerCase()
+					.includes(input.toLowerCase()) ||
+				restaurant.restaurant.cuisines
+					.toLowerCase()
+					.includes(input.toLowerCase()),
 		);
 
 		setUpdatedData(data);

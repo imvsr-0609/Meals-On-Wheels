@@ -4,6 +4,7 @@ import './AboutPage.css';
 import aboutData from './aboutData';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Tilt from 'react-parallax-tilt';
+import Footer from '../../components/Footer/Footer';
 
 const AboutPage = () => {
 	return (
@@ -18,7 +19,7 @@ const AboutPage = () => {
 					{aboutData.map((data, idx) => (
 						<Tilt scale="1.05">
 							<div className="about-card" key={idx}>
-								<img src={data.profile} alt="name" />
+								<img src={data.profile} alt={data.name} />
 
 								<div className="about-description">
 									<a href={data.github} target="blank">
