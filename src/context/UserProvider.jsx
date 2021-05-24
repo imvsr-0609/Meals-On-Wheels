@@ -20,7 +20,7 @@ function UserProvider(props) {
 		auth
 			.signInWithPopup(provider)
 			.then((res) => {
-				console.log(res.user);
+				console.log('Welcome to meals on wheels');
 			})
 			.catch((error) => {
 				console.log(error.message);
@@ -30,7 +30,7 @@ function UserProvider(props) {
 		auth
 			.signOut()
 			.then(() => {
-				console.log('loggedOut');
+				console.log('We would like to hear from you again.');
 				setUser(null);
 				sessionStorage.clear();
 			})

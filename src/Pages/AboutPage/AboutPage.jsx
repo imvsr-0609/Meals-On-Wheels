@@ -17,8 +17,8 @@ const AboutPage = () => {
 				</h1>
 				<div className="about-component">
 					{aboutData.map((data, idx) => (
-						<Tilt scale="1.05">
-							<div className="about-card" key={idx}>
+						<Tilt key={idx} scale="1.05">
+							<div className="about-card">
 								<img src={data.profile} alt={data.name} />
 
 								<div className="about-description">

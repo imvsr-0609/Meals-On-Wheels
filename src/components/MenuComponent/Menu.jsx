@@ -17,7 +17,6 @@ const MenuCard = ({ closetoggleMenu }) => {
 		return () => document.removeEventListener('click', handler);
 	});
 
-	console.log(menuData);
 	return (
 		<div className="menu-div">
 			<div className="menu-card" ref={menuRef}>

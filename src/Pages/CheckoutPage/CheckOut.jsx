@@ -28,7 +28,8 @@ const CheckOut = () => {
 	};
 
 	const onToken = (token) => {
-		console.log(token);
+		// console.log(token);
+		alert('Order placed Successfully');
 		setShowSuccessful(true);
 		clearCart();
 	};
