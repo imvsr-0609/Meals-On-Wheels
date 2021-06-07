@@ -6,8 +6,9 @@
 
 Meals On Wheels is a website designed primarily for use in the food delivery industry. This system will allow hotels and restaurants to increase scope of business by reducing the labor cost involved. The system also allows to quickly and easily manage an online menu which customers can browse and use to place orders with just few clicks. Restaurant employees then use these orders through an easy to navigate graphical interface for efficient processing
 
-
 <h2 align= "left"><b>Our Product - (A Preview)</b></h2>
+
+![image](https://user-images.githubusercontent.com/52796258/121055148-a467dc00-c7da-11eb-9f57-cdc014717b07.png)
 
 <h2 align= "left"><b>Have Fun With Our Product</b></h2>
 
